@@ -2,11 +2,13 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 
 
 
+
 function Input ({type, name}) {
     return (
         <View>
             <Text >{name}</Text>
-            <TextInput style={styles.input} />
+            
+            <TextInput placeholder={type ? 'Digite sua senha' : 'Digite seu email'} style={styles.input} />
         </View>
     );
 }
