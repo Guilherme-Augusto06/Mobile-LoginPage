@@ -3,6 +3,7 @@ import { StyleSheet, View, Image, Text, TextInput, TouchableOpacity } from 'reac
 import { FontAwesome5 } from '@expo/vector-icons';
 import Input from './components/input';
 import BackgroundColor from './components/Backgrounds';
+import Bottom1 from './components/bottom';
 
 export default function App() {
   return (
@@ -12,10 +13,10 @@ export default function App() {
       <View style={styles.container2}>  
         <Input name="Email:" type={false}/>
         <Input name="Senha:" type={true}/>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Acessar</Text>
+        <Bottom1 name="Acessar" color="black"/>
+        <TouchableOpacity>
+          <Text style={styles.bottomText}>Não possui conta? Cadastre-se</Text>
         </TouchableOpacity>
-        <Text style={styles.bottomText}>Não possui conta? Cadastre-se</Text>
         <View style={styles.iconsContainer}>
           <FontAwesome5 name="google" size={30} color="#000" style={styles.icon} />
           <FontAwesome5 name="facebook" size={30} color="#000" style={styles.icon} />
