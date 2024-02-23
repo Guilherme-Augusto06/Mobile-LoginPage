@@ -2,13 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Image, Text, TextInput, TouchableOpacity } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import Input from './components/input';
+import BackgroundColor from './components/Backgrounds';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Image source={require('./assets/Logo.png')} style={styles.logo} />
-      <Text style={styles.text}>Bem vindo(a)!</Text>
+      <BackgroundColor name="Bem vindo(a)!" color="#FF0000" />
       <View style={styles.container2}>  
         <Input name="Email:" type={false}/>
         <Input name="Senha:" type={true}/>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#FF0000',
+
   },
   logo: {
     width: 200,
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   text: {
     color: '#FFFFFF',
     fontSize: 20,
-    marginTop: 20,
+    marginTop: 30,
   },
   container2: {
     flex: 1,
